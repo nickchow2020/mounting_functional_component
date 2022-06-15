@@ -11,7 +11,7 @@ import App from './App';
 // </section>;
 
 const Button = (props) => {
-  <button>{props.children}</button>
+    <button>{props.children}</button>
 }
 
 class Counter extends React.Component {

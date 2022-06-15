@@ -38,13 +38,22 @@ const render = (
             }
             return
         }else if (typeof type === "function"){
-
+            // Assignment if it is function component
             // assignment to display functional component
+
+            // Solution 1: 
             curDom = document.createElement(type.name.toLowerCase())
             curDom.textContent = props.children
             console.log("it's a functional component",type.name.toLowerCase())
             console.log("it's a functional component",type)
             console.log("it's a functional component",reactElement)
+
+            // Solution 2:
+            // console.log("before using type")
+            // const curElement = type(props)
+            // console.log("after using type",curElement)
+            // render(curElement,domElement)
+            // return
         }else{
             curDom = document.createElement(type);
             Object.entries(props).forEach(
@@ -69,12 +78,12 @@ const render = (
                 }
             );
         }
+            
+        
 
 
         console.log(curDom)
         // Assignment if it is function component
-
-        /// else 
 
     }
 
