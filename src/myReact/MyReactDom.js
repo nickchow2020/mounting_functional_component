@@ -43,6 +43,8 @@ const render = (
             curDom = document.createElement(type.name.toLowerCase())
             curDom.textContent = props.children
             console.log("it's a functional component",type.name.toLowerCase())
+            console.log("it's a functional component",type)
+            console.log("it's a functional component",reactElement)
         }else{
             curDom = document.createElement(type);
             Object.entries(props).forEach(
